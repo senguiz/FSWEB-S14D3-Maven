@@ -4,14 +4,22 @@ public class ElectricCar extends CarSkeleton{
     double avgKmPerLitre;
     int batterySize;
 
+    public ElectricCar(String name, String description, double avgKmPerLitre, int batterySize) {
+        super(name, description);
+        this.avgKmPerLitre = avgKmPerLitre;
+        this.batterySize = batterySize;
+    }
+
     public ElectricCar(double avgKmPerLitre, int batterySize) {
         this.avgKmPerLitre = avgKmPerLitre;
         this.batterySize = batterySize;
     }
-    public void startEngine(){
-
+    public String startEngine(){
+        return getClass().getSimpleName()+"'s engine started.";
     }
-    public void drive(){
+
+    public String drive(){
         runEngine();
+        return getClass().getSimpleName()+" is driving.";
     }
 }

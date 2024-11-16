@@ -11,14 +11,15 @@ public class CarSkeleton {
         this.name = name;
         this.description = description;
     }
-    public void startEngine(){
-
+    public String startEngine(){
+        return "The "+getClass().getSimpleName()+"'s engine started.";
     }
-    protected void runEngine(){
-
+    protected String runEngine(){
+        return "The "+getClass().getSimpleName()+"'s engine running.";
     }
-    public void drive(){
-    runEngine();
+    public String drive(){
+        runEngine();
+        return "The "+getClass().getSimpleName()+" is driving.";
     }
 
 
